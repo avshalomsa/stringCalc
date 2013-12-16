@@ -25,6 +25,7 @@ public class calculator {
 		// TODO Auto-generated method stub
 		return Integer.parseInt(str);
 	}
+//check
 	private int getSum(String num1, String num2)
 	{
 		return Integer.parseInt(num1)+Integer.parseInt(num2);
