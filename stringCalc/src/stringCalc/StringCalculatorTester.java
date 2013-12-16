@@ -17,8 +17,13 @@ public class StringCalculatorTester {
       @Test 
       public void EmptyString() throws Exception
       {
-              calculator calc=new calculator();
-              assertEquals(calc.Add(""), 0);
+             assertEquals(calc.Add(""), 0);
+      }
+      
+      @Test
+      public void testForOne() {
+            
+              assertEquals("1", 1);
       }
 
 }

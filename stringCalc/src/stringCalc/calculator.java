@@ -8,7 +8,12 @@ public class calculator {
               {
                       return 0;
               }
-              return 1;
+              return stringToInt(str);
               
       }
+
+	private int stringToInt(String str) {
+		// TODO Auto-generated method stub
+		return Integer.parseInt(str);
+	}
 }
