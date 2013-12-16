@@ -36,6 +36,6 @@ public class calculator {
 		}
 		return sum;
 	}
-
+	
 	
 }
