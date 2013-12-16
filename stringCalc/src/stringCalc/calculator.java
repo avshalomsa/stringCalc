@@ -30,7 +30,17 @@ public class calculator {
 	}
 
 	private int getSum(String[] numbers) throws Exception
-	{	for (int i = 0; i < numbers.length; i++)
+	{	 checkWrongInput(numbers);
+		int sum=0;
+		for (int i = 0; i < numbers.length; i++) {
+			sum+=stringToInt(numbers[i]);
+		}
+		return sum;
+	}
+	
+	private void checkWrongInput(String[] numbers) throws Exception
+	{
+		for (int i = 0; i < numbers.length; i++)
 		{
 			if (stringToInt(numbers[i])<0)
 			{
@@ -38,12 +48,6 @@ public class calculator {
 			}
 
 		}
-		int sum=0;
-		for (int i = 0; i < numbers.length; i++) {
-			sum+=Integer.parseInt(numbers[i]);
-		}
-		return sum;
 	}
-	
 	
 }
