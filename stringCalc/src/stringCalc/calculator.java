@@ -34,5 +34,5 @@ public class calculator {
 		return Integer.parseInt(num1)+Integer.parseInt(num2);
 	}
 
-
+	
 }
