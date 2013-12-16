@@ -23,7 +23,12 @@ public class StringCalculatorTester {
       @Test
       public void testForOne() {
             
-              assertEquals("1", 1);
+              try {
+				assertEquals(calc.Add("1"), 1);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
       }
 
 }
