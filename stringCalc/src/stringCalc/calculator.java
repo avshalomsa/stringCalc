@@ -13,7 +13,8 @@ public class calculator {
             	  return stringToInt(str);
               }
               else {
-            	  return Integer.parseInt(numbers[0])+Integer.parseInt(numbers[1]);
+            	  return getSum(numbers[0], numbers[1]);
+            		
               }
       }
 	private boolean isEmpty(String str)
@@ -24,5 +25,8 @@ public class calculator {
 		// TODO Auto-generated method stub
 		return Integer.parseInt(str);
 	}
-	
+	private int getSum(String num1, String num2)
+	{
+		return Integer.parseInt(num1)+Integer.parseInt(num2);
+	}
 }
