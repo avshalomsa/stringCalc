@@ -13,7 +13,7 @@ public class calculator {
             	  return stringToInt(str);
               }
               else {
-            	  return Integer.parseInt(numbers[0]+Integer.parseInt(numbers[1]));
+            	  return Integer.parseInt(numbers[0])+Integer.parseInt(numbers[1]);
               }
       }
 	private boolean isEmpty(String str)
