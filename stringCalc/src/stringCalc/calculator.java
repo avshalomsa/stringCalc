@@ -3,7 +3,7 @@ package stringCalc;
 public class calculator {
 	  public int Add(String str) throws Exception
       {
-		  	String[] numbers = str.split(",");
+		  	String[] numbers = str.split(",|\n");
               if(str.isEmpty())
               {
                       return 0;
