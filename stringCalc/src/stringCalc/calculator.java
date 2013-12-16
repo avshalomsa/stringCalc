@@ -16,4 +16,5 @@ public class calculator {
 		// TODO Auto-generated method stub
 		return Integer.parseInt(str);
 	}
+	
 }
