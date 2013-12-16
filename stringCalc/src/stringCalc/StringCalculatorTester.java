@@ -50,16 +50,19 @@ public class StringCalculatorTester {
               assertEquals(calc.Add("1,2,3,4,5"), 15);
       }
       
-      /* @Test
-      public void differentSpliters() throws Exception
-      {
-              assertEquals(calc.Add("//;\n1;2"), 3);
-      }*/
+   
 
       @Test(expected=Exception.class)
       public void NegativeNumber() throws Exception
       {
               calc.Add("-1");
       }
-      
+  
+      @Test
+      public void differentSpliters() throws Exception
+      {
+    	   	System.out.println("dif");
+              assertEquals(calc.Add(";1;2"), 3);
+          	System.out.println("EnDOFdif");
+      }
 }

@@ -7,6 +7,9 @@ public class calculator {
 	public int Add(String str) throws Exception
 	{
 		String[] numbers = str.split(spliters);
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println(numbers[i]);
+		}
 		if(str.isEmpty())
 		{
 			return 0;
@@ -28,9 +31,12 @@ public class calculator {
 
 	private int getSum(String[] numbers) throws Exception
 	{	 checkWrongInput(numbers);
+		
 		int sum=0;
 		for (int i = 0; i < numbers.length; i++) {
-			sum+=stringToInt(numbers[i]);
+			if(isNumeric(numbers[i]))
+				sum+=0;
+			else sum+=stringToInt(numbers[i]);
 		}
 		return sum;
 	}
@@ -40,7 +46,7 @@ public class calculator {
 		for (int i = 0; i < numbers.length; i++)
 		{
 			
-			if ((isNumeric(numbers[i])||stringToInt(numbers[i])<0))
+			if (stringToInt(numbers[i])<0)
 			{
 				throw new Exception("Negative Input");
 			}
@@ -50,10 +56,10 @@ public class calculator {
 	
 	public static boolean isNumeric(String str)
 	{
-		if(str.matches("-\\[,'\n']+"))
+		if(str.matches(";"))
 			System.out.println("ccc");
 		//System.out.println("cccssss");
-	  return str.matches("-\\[,\n]+");  //match a number with optional '-' and decimal.
+	  return str.matches(";");  //match a number with optional '-' and decimal.
 	}
 	
 }
