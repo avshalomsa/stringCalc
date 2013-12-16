@@ -1,22 +1,25 @@
 package stringCalc;
 
 public class calculator {
-	  public int Add(String str) throws Exception
-      {
-		  	String[] numbers = str.split(",|\n");
-              if(str.isEmpty())
-              {
-                      return 0;
-              }
-              if(str.length()==1)
-              {
-            	  return stringToInt(str);
-              }
-              else {
-            	  return getSum(numbers[0], numbers[1]);
-            		
-              }
-      }
+	
+	private final String spliters= ",|\n";
+	
+	public int Add(String str) throws Exception
+	{
+		String[] numbers = str.split(spliters);
+		if(str.isEmpty())
+		{
+			return 0;
+		}
+		if(str.length()==1)
+		{
+			return stringToInt(str);
+		}
+		else {
+			return getSum(numbers[0], numbers[1]);
+
+		}
+	}
 	private boolean isEmpty(String str)
 	{
 		return str.isEmpty();
@@ -30,6 +33,6 @@ public class calculator {
 	{
 		return Integer.parseInt(num1)+Integer.parseInt(num2);
 	}
-	
-	
+
+
 }
