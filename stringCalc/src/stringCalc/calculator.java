@@ -8,6 +8,10 @@ public class calculator {
               {
                       return 0;
               }
+              if(str.length()==1)
+              {
+            	  return stringToInt(str);
+              }
               else {
             	  return Integer.parseInt(numbers[0]+Integer.parseInt(numbers[1]));
               }
