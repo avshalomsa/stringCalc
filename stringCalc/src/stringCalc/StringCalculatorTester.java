@@ -56,6 +56,10 @@ public class StringCalculatorTester {
               assertEquals(calc.Add("//;\n1;2"), 3);
       }*/
 
-      
+      @Test
+      public void NegativeNumber() throws Exception
+      {
+              calc.Add("-1");
+      }
       
 }

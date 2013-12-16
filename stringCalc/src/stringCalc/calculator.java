@@ -29,8 +29,16 @@ public class calculator {
 		return Integer.parseInt(str);
 	}
 
-	private int getSum(String[] numbers)
-	{	int sum=0;
+	private int getSum(String[] numbers) throws Exception
+	{	for (int i = 0; i < numbers.length; i++)
+		{
+			if (stringToInt(numbers[i])<0)
+			{
+				throw new Exception("Negative Input");
+			}
+
+		}
+		int sum=0;
 		for (int i = 0; i < numbers.length; i++) {
 			sum+=Integer.parseInt(numbers[i]);
 		}
