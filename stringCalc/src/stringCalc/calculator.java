@@ -20,10 +20,7 @@ public class calculator {
 
 		}
 	}
-	private boolean isEmpty(String str)
-	{
-		return str.isEmpty();
-	}
+
 	private int stringToInt(String str) {
 		// TODO Auto-generated method stub
 		return Integer.parseInt(str);
@@ -42,12 +39,21 @@ public class calculator {
 	{
 		for (int i = 0; i < numbers.length; i++)
 		{
-			if (stringToInt(numbers[i])<0)
+			
+			if ((isNumeric(numbers[i])||stringToInt(numbers[i])<0))
 			{
 				throw new Exception("Negative Input");
 			}
 
 		}
+	}
+	
+	public static boolean isNumeric(String str)
+	{
+		if(str.matches("-\\[,'\n']+"))
+			System.out.println("ccc");
+		//System.out.println("cccssss");
+	  return str.matches("-\\[,\n]+");  //match a number with optional '-' and decimal.
 	}
 	
 }
