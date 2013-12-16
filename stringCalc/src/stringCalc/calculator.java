@@ -2,7 +2,7 @@ package stringCalc;
 
 public class calculator {
 	
-	private final String spliters= ",|\n";
+	private final String spliters= "[,\n]+";
 	
 	public int Add(String str) throws Exception
 	{
